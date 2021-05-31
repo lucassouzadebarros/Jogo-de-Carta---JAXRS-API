@@ -7,9 +7,9 @@
 
 ### Importando projeto no spring
 1 - Abre o Spring Tool Suite<br>
-2 - Seleciona a pasta clonada do projeto<br>
-3 - Clique em file<br>
-4 - Import<br>
-5 - Abre a pasta maven<br>
-6 - Existing Maven Projects<br>
-7 - Seleciona seu projeto e importa ele.
+2 - Clique em file<br>
+3 - Import<br>
+4 - Existing Maven Projects<br>
+5 - Seleciona a pasta clonada do projeto<br>
+6 - Seleciona seu projeto e importa ele.
+
