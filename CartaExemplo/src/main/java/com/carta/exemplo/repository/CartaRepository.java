@@ -9,6 +9,7 @@ import javax.ws.rs.core.Response;
 import com.carta.exemplo.enuns.Classe;
 import com.carta.exemplo.enuns.Tipo;
 import com.carta.exemplo.model.Carta;
+import com.carta.validation.CartaValidation;
 
 public class CartaRepository {
 
@@ -81,16 +82,27 @@ public class CartaRepository {
 	    
 	    public Response Add(Carta carta) {
 	    	
-	    	Integer Ataque = carta.getAtaque();
+	    	CartaValidation cartavalidation = new CartaValidation();
+			
 	    	
+	    if(cartavalidation.Validacao(carta.getAtaque()) == true & cartavalidation.Validacao(carta.getDefesa()) == true) {
 	    	try {
-	    			    		
-	    		carta.setId(generateId(cartas.size() + 1));
+	    		
+	    		 carta.setId(generateId(cartas.size() + 1));
 		    	 cartas.put(carta.getId(), carta);
 		    	 return Response.status(Response.Status.CREATED).entity(carta).build();
-			} catch (Exception e) {
+		    	 
+			}
+	    	
+	    	catch (Exception e) {
 				 return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(e.getMessage()).build();
 			}
+	    } else
+	    	
+	    	return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(Exception.class).build();
+	    
+	    		    	
+	    	 
 	         
 	       
 	    }
@@ -98,6 +110,7 @@ public class CartaRepository {
 	    public Response Editar(Carta carta) {
 	    	
 	    	try {
+	    			    		
 	    		cartas.remove(carta.getId());
 		    	cartas.put(carta.getId(), carta);
 		    	return Response.status(Response.Status.CREATED).entity(carta).build();

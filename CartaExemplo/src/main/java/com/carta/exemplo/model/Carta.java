@@ -26,9 +26,11 @@ public class Carta  {
 	
 	private String  Nome;      
 	
+	@NotNull(message = "Codigo é obrigatório")
 	private int Ataque;   
-		
-	private int Defesa;  
+	
+	@Range(min=3,max=10,message="A qde de liquido varia entre 30ml e 2000ml")
+	private Integer Defesa;  
 	
 		
 	@Enumerated(EnumType.STRING)
