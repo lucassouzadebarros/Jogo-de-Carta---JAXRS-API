@@ -1,4 +1,4 @@
-package com.carta.validation;
+package com.carta.exemplo.validation;
 
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
@@ -6,17 +6,17 @@ import javax.ws.rs.core.Response.Status;
 public class CartaValidation {
 	
 	
-	private int numero;
+	private int numeros;
 	
 	
 	
 
 	public int getNumero() {
-		return numero;
+		return numeros;
 	}
 
 	public void setNumero(int numero) {
-		this.numero = numero;
+		this.numeros = numero;
 	}
 	
 	

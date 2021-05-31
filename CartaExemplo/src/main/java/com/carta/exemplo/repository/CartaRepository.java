@@ -9,7 +9,7 @@ import javax.ws.rs.core.Response;
 import com.carta.exemplo.enuns.Classe;
 import com.carta.exemplo.enuns.Tipo;
 import com.carta.exemplo.model.Carta;
-import com.carta.validation.CartaValidation;
+import com.carta.exemplo.validation.CartaValidation;
 
 public class CartaRepository {
 
