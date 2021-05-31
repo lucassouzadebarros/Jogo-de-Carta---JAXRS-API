@@ -10,7 +10,7 @@
 2 - Clique em file<br>
 3 - Import<br>
 4 - Existing Maven Projects<br>
-5 - Seleciona a pasta clonada do projeto<br>
+5 - Seleciona a pasta clonada do projeto(CartaExemplo)<br>
 6 - Seleciona seu projeto e importa ele.
 
 
